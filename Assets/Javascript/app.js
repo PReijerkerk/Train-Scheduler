@@ -109,7 +109,8 @@ database.ref().on("child_added", function(childSnapshot) {
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm a");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
+    //BUG console.log no longer works
+    //console.log("ARRIVAL TIME: " + moment(nextTrain));
 
     return {
       tMinutesTillTrain: tMinutesTillTrain,
@@ -117,3 +118,5 @@ database.ref().on("child_added", function(childSnapshot) {
     }
   
   };
+
+  
